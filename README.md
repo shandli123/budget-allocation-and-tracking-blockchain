@@ -1,4 +1,4 @@
-# Budget Allocation and Tracking
+# Budget Allocation and Tracking Using Blockchain
 This is the blockchain based project which is used to do budget allocation and tracking.
 You can search with purpose and details of transaction.
 
