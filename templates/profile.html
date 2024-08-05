@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block title %}Profile{% endblock %}
+{% block content %}
+<a class="button" href="{{url_for('logout')}}">
+    <img class="verified" src=\static\img\verified-user.jpg>
+    <p class="logout">LOGOUT</p>
+</a>
+<div class="profile">
+    <p>Your account details are below:</p>
+    {{msg}}
+    <table>
+        <tr>
+            <td>Username:</td>
+            <td>{{ account['username'] }}</td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td>{{ account['email'] }}</td>
+        </tr>
+        <tr>
+            <td>Public Key:</td>
+            <td >{{ account['public_key_comp'] }}</td>
+        </tr>
+    </table>
+</div>
+{% endblock %}

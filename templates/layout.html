@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{url_for('static',filename="css/nav.css")}}">
+    <link rel="stylesheet" href="{{url_for('static',filename="css/style.css")}}">
+</head>
+
+<body>
+    <header>
+        <div class="container" >
+          <div >
+            <a href="{{url_for('profile')}}">
+              <img src="\static\img\blockchain-logo.png" class="logo-box">
+            </a>
+          </div>
+          <nav>
+          <ul>
+            <li><a href="{{url_for('home')}}">Home</a></li>
+            <li><a href="{{url_for('add_transaction')}}">Add Transaction</a></li>
+            <li><a href="{{url_for('mine_block')}}">Mine BLock</a></li>
+            <li><a href="{{url_for('get_chain')}}">View Transaction</a></li>
+            <li><a href="{{url_for('track_transaction')}}">Track Transaction</a></li>
+            <li><a href="{{url_for('profile')}}">Profile</a></li>
+         </ul>
+        </nav>
+        </div>
+      </header>
+      
+</body>
+
+{% block content %}
+{% endblock %}
+
+</html>

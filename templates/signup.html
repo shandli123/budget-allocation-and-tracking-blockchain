@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% block title %}Sign Up{% endblock %}
+{% block content %}
+<script>
+  function myFunction() {
+    var x = document.getElementById("password");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  }
+</script>
+<div class="log">
+  <img src="\static\img\signup.png" class="signup_photo">
+  <h1>Sign Up</h1>
+  <form method="POST" >
+    <div class="text">
+      <input type="text" name="username"  required>
+      <span class="underline"></span>
+      <label class="ep"  >Username</label>
+    </div>
+    <div class="text">
+      <input type="text" name="email"  required>
+      <span class="underline"></span>
+      <label class="ep"  >Email</label>
+    </div>
+    <div class="text">
+      <input type="password" name="password" id="password" required>
+      <span class="underline"></span>
+      <label class="ep" >Password</label>
+    </div>
+    {% if "exists" in msg %}
+    <div class="incorrect">
+      {{msg}}
+    </div>
+    {% endif %}
+    {% if "Invalid" in msg %}
+    <div class="incorrect">
+      {{msg}}
+    </div>
+    {% endif %}
+    <div class="sh">
+      <label>
+        <input type="checkbox" name="checkbox" value="no" onclick="myFunction()">
+        <span class="show">Show Password</span>
+      </label>
+    </div>
+    <input type="submit" name="submit" value="Sign Up" class="login">
+    <div class="signup">
+      Have an account? <a href="{{url_for('home')}}">Login</a>
+    </div>
+  </form>
+</div>
+{% if "successfully" in msg %}
+    <div class="sucessful">
+      <p style="color:white">{{msg[:55]}}</p>
+      <p>{{msg[55:]}}</p>
+      <p style="color:white">Copy this key for further transaction.</p>
+    </div>
+    {% endif %}
+{% endblock %}
