@@ -16,14 +16,14 @@ You can search with purpose and details of transaction.
 6. ```pip install -upgrade setuptools```
 7. Set up your mysql creds here on line #138 in blockchain.py and node_5001.py
   ```
-  mydb = mysql.connector.connect(
-        host="127.0.0.1",
-        port = 3306,
-        user="abc",
-        passwd="****",
-        database="blockchain"
-    )
-  ````
+mydb = mysql.connector.connect(
+      host="127.0.0.1",
+      port = 3306,
+      user="abc",
+      passwd="****",
+      database="blockchain"
+  )
+````
 6. Run one node on port 5000 and other on 5001
   ```
     flask --app blockchain.py run 
