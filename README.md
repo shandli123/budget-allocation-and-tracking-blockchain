@@ -31,3 +31,10 @@ mydb = mysql.connector.connect(
  ```
 7. You can also add node by adding it in nodes.json and add file for every added node change
    the port address in the file as well.
+8. visit ```http://127.0.0.1:5000/home```
+
+#Functionality
+You can Login or Sign up on the portal, once done you must copy your private key to sign any transaction (**Keep safely**).
+You can add transaction and then mine the block we use **proof of work** consensus mechanism to mine the block and add it to
+the blockchain.You can view the transactions uptil now we only keep the longest chain if different nodes have different chains.
+You can also track and visualize all the transactions using the search functionality. 
