@@ -7,8 +7,10 @@ You can search with purpose and details of transaction.
 2. Create and activate virtual env using
    ```
    python3 -m venv path/to/venv
+
    for Mac
    source path/to/venv/bin/activate
+
    for Windows
    venv\Scripts\activate
    ```
